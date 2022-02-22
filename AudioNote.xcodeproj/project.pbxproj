@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05193AB827B1F9E500231F42 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05193AB727B1F9E500231F42 /* AVFoundation.framework */; };
+		051B8F1727B335CC008EFBC7 /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051B8F1627B335CC008EFBC7 /* PagingViewController.swift */; };
+		0545326C27C18FA200873175 /* ScrubbingAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0545326B27C18FA200873175 /* ScrubbingAudioViewController.swift */; };
 		05B0350227AF21A70032876D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350127AF21A70032876D /* AppDelegate.swift */; };
 		05B0350427AF21A70032876D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350327AF21A70032876D /* SceneDelegate.swift */; };
 		05B0350627AF21A70032876D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350527AF21A70032876D /* ViewController.swift */; };
-		05B0350927AF21A70032876D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B0350727AF21A70032876D /* Main.storyboard */; };
 		05B0350C27AF21A70032876D /* AudioNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350A27AF21A70032876D /* AudioNote.xcdatamodeld */; };
 		05B0350E27AF21A80032876D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B0350D27AF21A80032876D /* Assets.xcassets */; };
 		05B0351127AF21A80032876D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B0350F27AF21A80032876D /* LaunchScreen.storyboard */; };
 		05B0351C27AF21A90032876D /* AudioNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0351B27AF21A90032876D /* AudioNoteTests.swift */; };
 		05B0352627AF21A90032876D /* AudioNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0352527AF21A90032876D /* AudioNoteUITests.swift */; };
 		05B0352827AF21A90032876D /* AudioNoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0352727AF21A90032876D /* AudioNoteUITestsLaunchTests.swift */; };
+		05FFAD7727B4DC8900431F29 /* AudioWaveFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FFAD7627B4DC8900431F29 /* AudioWaveFormView.swift */; };
+		05FFAD7927B4EBC000431F29 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FFAD7827B4EBC000431F29 /* AudioController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05193AB727B1F9E500231F42 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		051B8F1627B335CC008EFBC7 /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
+		0545326B27C18FA200873175 /* ScrubbingAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrubbingAudioViewController.swift; sourceTree = "<group>"; };
 		05B034FE27AF21A70032876D /* AudioNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B0350127AF21A70032876D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B0350327AF21A70032876D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		05B0350527AF21A70032876D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		05B0350827AF21A70032876D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05B0350B27AF21A70032876D /* AudioNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AudioNote.xcdatamodel; sourceTree = "<group>"; };
 		05B0350D27AF21A80032876D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05B0351027AF21A80032876D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +57,8 @@
 		05B0352127AF21A90032876D /* AudioNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B0352527AF21A90032876D /* AudioNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNoteUITests.swift; sourceTree = "<group>"; };
 		05B0352727AF21A90032876D /* AudioNoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		05FFAD7627B4DC8900431F29 /* AudioWaveFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWaveFormView.swift; sourceTree = "<group>"; };
+		05FFAD7827B4EBC000431F29 /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05193AB827B1F9E500231F42 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05193AB627B1F9E500231F42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05193AB727B1F9E500231F42 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		05B034F527AF21A70032876D = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +102,7 @@
 				05B0351A27AF21A90032876D /* AudioNoteTests */,
 				05B0352427AF21A90032876D /* AudioNoteUITests */,
 				05B034FF27AF21A70032876D /* Products */,
+				05193AB627B1F9E500231F42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,11 +122,14 @@
 				05B0350127AF21A70032876D /* AppDelegate.swift */,
 				05B0350327AF21A70032876D /* SceneDelegate.swift */,
 				05B0350527AF21A70032876D /* ViewController.swift */,
-				05B0350727AF21A70032876D /* Main.storyboard */,
 				05B0350D27AF21A80032876D /* Assets.xcassets */,
 				05B0350F27AF21A80032876D /* LaunchScreen.storyboard */,
 				05B0351227AF21A80032876D /* Info.plist */,
 				05B0350A27AF21A70032876D /* AudioNote.xcdatamodeld */,
+				051B8F1627B335CC008EFBC7 /* PagingViewController.swift */,
+				05FFAD7627B4DC8900431F29 /* AudioWaveFormView.swift */,
+				05FFAD7827B4EBC000431F29 /* AudioController.swift */,
+				0545326B27C18FA200873175 /* ScrubbingAudioViewController.swift */,
 			);
 			path = AudioNote;
 			sourceTree = "<group>";
@@ -236,7 +257,6 @@
 			files = (
 				05B0351127AF21A80032876D /* LaunchScreen.storyboard in Resources */,
 				05B0350E27AF21A80032876D /* Assets.xcassets in Resources */,
-				05B0350927AF21A70032876D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05FFAD7927B4EBC000431F29 /* AudioController.swift in Sources */,
+				0545326C27C18FA200873175 /* ScrubbingAudioViewController.swift in Sources */,
 				05B0350627AF21A70032876D /* ViewController.swift in Sources */,
 				05B0350227AF21A70032876D /* AppDelegate.swift in Sources */,
 				05B0350C27AF21A70032876D /* AudioNote.xcdatamodeld in Sources */,
 				05B0350427AF21A70032876D /* SceneDelegate.swift in Sources */,
+				05FFAD7727B4DC8900431F29 /* AudioWaveFormView.swift in Sources */,
+				051B8F1727B335CC008EFBC7 /* PagingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +325,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		05B0350727AF21A70032876D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05B0350827AF21A70032876D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		05B0350F27AF21A80032876D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -371,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -426,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -448,7 +464,7 @@
 				INFOPLIST_FILE = AudioNote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,7 +492,7 @@
 				INFOPLIST_FILE = AudioNote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
