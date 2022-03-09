@@ -9,17 +9,35 @@
 /* Begin PBXBuildFile section */
 		05193AB827B1F9E500231F42 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05193AB727B1F9E500231F42 /* AVFoundation.framework */; };
 		051B8F1727B335CC008EFBC7 /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051B8F1627B335CC008EFBC7 /* PagingViewController.swift */; };
+		052885ED27C73BF60014ACD5 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052885EC27C73BF60014ACD5 /* RecordingView.swift */; };
 		0545326C27C18FA200873175 /* ScrubbingAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0545326B27C18FA200873175 /* ScrubbingAudioViewController.swift */; };
+		0545327627C491C100873175 /* MobiusCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0545327527C491C100873175 /* MobiusCore */; };
+		0545327827C491C100873175 /* MobiusExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 0545327727C491C100873175 /* MobiusExtras */; };
+		0545327A27C491C100873175 /* MobiusTest in Frameworks */ = {isa = PBXBuildFile; productRef = 0545327927C491C100873175 /* MobiusTest */; };
+		0545327C27C4926000873175 /* AudioRecorderLoopTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0545327B27C4926000873175 /* AudioRecorderLoopTypes.swift */; };
+		054AF6D627D7BC460024A166 /* AudioRecorderLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6D527D7BC460024A166 /* AudioRecorderLogic.swift */; };
+		054AF6D827D7BC6B0024A166 /* AudioRecorderFuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6D727D7BC6B0024A166 /* AudioRecorderFuser.swift */; };
+		054AF6DA27D7BC840024A166 /* AudioRecorderDiffuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6D927D7BC840024A166 /* AudioRecorderDiffuser.swift */; };
+		054AF6DD27D7BCE40024A166 /* AudioRecorderViewConnectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6DC27D7BCE40024A166 /* AudioRecorderViewConnectable.swift */; };
+		054AF6DF27D7BD0C0024A166 /* AudioRecorderLoopFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6DE27D7BD0C0024A166 /* AudioRecorderLoopFactory.swift */; };
+		054AF6E127D832F90024A166 /* AudioRecorderSubtypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6E027D832F90024A166 /* AudioRecorderSubtypes.swift */; };
+		054AF6E327D8338D0024A166 /* AudioRecorderViewBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6E227D8338D0024A166 /* AudioRecorderViewBinder.swift */; };
+		056E70B527CA786B001731E3 /* UIColor+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E70B427CA786B001731E3 /* UIColor+Extentions.swift */; };
+		05AC9ECE27CF0072009F1F95 /* RecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC9ECD27CF0072009F1F95 /* RecordButtonView.swift */; };
 		05B0350227AF21A70032876D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350127AF21A70032876D /* AppDelegate.swift */; };
 		05B0350427AF21A70032876D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350327AF21A70032876D /* SceneDelegate.swift */; };
-		05B0350627AF21A70032876D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350527AF21A70032876D /* ViewController.swift */; };
+		05B0350627AF21A70032876D /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350527AF21A70032876D /* RecordingViewController.swift */; };
 		05B0350C27AF21A70032876D /* AudioNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350A27AF21A70032876D /* AudioNote.xcdatamodeld */; };
 		05B0350E27AF21A80032876D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B0350D27AF21A80032876D /* Assets.xcassets */; };
 		05B0351127AF21A80032876D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B0350F27AF21A80032876D /* LaunchScreen.storyboard */; };
 		05B0351C27AF21A90032876D /* AudioNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0351B27AF21A90032876D /* AudioNoteTests.swift */; };
 		05B0352627AF21A90032876D /* AudioNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0352527AF21A90032876D /* AudioNoteUITests.swift */; };
 		05B0352827AF21A90032876D /* AudioNoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0352727AF21A90032876D /* AudioNoteUITestsLaunchTests.swift */; };
-		05FFAD7727B4DC8900431F29 /* AudioWaveFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FFAD7627B4DC8900431F29 /* AudioWaveFormView.swift */; };
+		05B3F10C27CFBB9E00F93851 /* Diffuser in Frameworks */ = {isa = PBXBuildFile; productRef = 05B3F10B27CFBB9E00F93851 /* Diffuser */; };
+		05F69E0A27CD7B23003AF834 /* IconPathFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F69E0927CD7B23003AF834 /* IconPathFactory.swift */; };
+		05F69E0D27CD7B54003AF834 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F69E0C27CD7B54003AF834 /* Icons.swift */; };
+		05F69E0F27CD7DE3003AF834 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F69E0E27CD7DE3003AF834 /* IconView.swift */; };
+		05FFAD7727B4DC8900431F29 /* AudioVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FFAD7627B4DC8900431F29 /* AudioVisualizerView.swift */; };
 		05FFAD7927B4EBC000431F29 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FFAD7827B4EBC000431F29 /* AudioController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +61,22 @@
 /* Begin PBXFileReference section */
 		05193AB727B1F9E500231F42 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		051B8F1627B335CC008EFBC7 /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
+		052885EC27C73BF60014ACD5 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		0545326B27C18FA200873175 /* ScrubbingAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrubbingAudioViewController.swift; sourceTree = "<group>"; };
+		0545327B27C4926000873175 /* AudioRecorderLoopTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderLoopTypes.swift; sourceTree = "<group>"; };
+		054AF6D527D7BC460024A166 /* AudioRecorderLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderLogic.swift; sourceTree = "<group>"; };
+		054AF6D727D7BC6B0024A166 /* AudioRecorderFuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderFuser.swift; sourceTree = "<group>"; };
+		054AF6D927D7BC840024A166 /* AudioRecorderDiffuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderDiffuser.swift; sourceTree = "<group>"; };
+		054AF6DC27D7BCE40024A166 /* AudioRecorderViewConnectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewConnectable.swift; sourceTree = "<group>"; };
+		054AF6DE27D7BD0C0024A166 /* AudioRecorderLoopFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderLoopFactory.swift; sourceTree = "<group>"; };
+		054AF6E027D832F90024A166 /* AudioRecorderSubtypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderSubtypes.swift; sourceTree = "<group>"; };
+		054AF6E227D8338D0024A166 /* AudioRecorderViewBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewBinder.swift; sourceTree = "<group>"; };
+		056E70B427CA786B001731E3 /* UIColor+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extentions.swift"; sourceTree = "<group>"; };
+		05AC9ECD27CF0072009F1F95 /* RecordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonView.swift; sourceTree = "<group>"; };
 		05B034FE27AF21A70032876D /* AudioNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B0350127AF21A70032876D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B0350327AF21A70032876D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05B0350527AF21A70032876D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05B0350527AF21A70032876D /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		05B0350B27AF21A70032876D /* AudioNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AudioNote.xcdatamodel; sourceTree = "<group>"; };
 		05B0350D27AF21A80032876D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05B0351027AF21A80032876D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +86,10 @@
 		05B0352127AF21A90032876D /* AudioNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B0352527AF21A90032876D /* AudioNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNoteUITests.swift; sourceTree = "<group>"; };
 		05B0352727AF21A90032876D /* AudioNoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		05FFAD7627B4DC8900431F29 /* AudioWaveFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWaveFormView.swift; sourceTree = "<group>"; };
+		05F69E0927CD7B23003AF834 /* IconPathFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPathFactory.swift; sourceTree = "<group>"; };
+		05F69E0C27CD7B54003AF834 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		05F69E0E27CD7DE3003AF834 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		05FFAD7627B4DC8900431F29 /* AudioVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizerView.swift; sourceTree = "<group>"; };
 		05FFAD7827B4EBC000431F29 /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +98,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B3F10C27CFBB9E00F93851 /* Diffuser in Frameworks */,
+				0545327827C491C100873175 /* MobiusExtras in Frameworks */,
+				0545327627C491C100873175 /* MobiusCore in Frameworks */,
 				05193AB827B1F9E500231F42 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0545327A27C491C100873175 /* MobiusTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +129,37 @@
 				05193AB727B1F9E500231F42 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		054AF6D127D2824C0024A166 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				05AC9ECD27CF0072009F1F95 /* RecordButtonView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		054AF6D227D7BB4F0024A166 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				054AF6DB27D7BCCF0024A166 /* UI */,
+				0545327B27C4926000873175 /* AudioRecorderLoopTypes.swift */,
+				054AF6D527D7BC460024A166 /* AudioRecorderLogic.swift */,
+				054AF6D727D7BC6B0024A166 /* AudioRecorderFuser.swift */,
+				054AF6D927D7BC840024A166 /* AudioRecorderDiffuser.swift */,
+				054AF6DE27D7BD0C0024A166 /* AudioRecorderLoopFactory.swift */,
+				054AF6E027D832F90024A166 /* AudioRecorderSubtypes.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		054AF6DB27D7BCCF0024A166 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				054AF6DC27D7BCE40024A166 /* AudioRecorderViewConnectable.swift */,
+				054AF6E227D8338D0024A166 /* AudioRecorderViewBinder.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		05B034F527AF21A70032876D = {
@@ -119,17 +186,22 @@
 		05B0350027AF21A70032876D /* AudioNote */ = {
 			isa = PBXGroup;
 			children = (
+				054AF6D227D7BB4F0024A166 /* Domain */,
+				054AF6D127D2824C0024A166 /* UIComponents */,
+				05F69E0B27CD7B3B003AF834 /* IconLibrary */,
 				05B0350127AF21A70032876D /* AppDelegate.swift */,
 				05B0350327AF21A70032876D /* SceneDelegate.swift */,
-				05B0350527AF21A70032876D /* ViewController.swift */,
+				05B0350527AF21A70032876D /* RecordingViewController.swift */,
 				05B0350D27AF21A80032876D /* Assets.xcassets */,
 				05B0350F27AF21A80032876D /* LaunchScreen.storyboard */,
 				05B0351227AF21A80032876D /* Info.plist */,
 				05B0350A27AF21A70032876D /* AudioNote.xcdatamodeld */,
 				051B8F1627B335CC008EFBC7 /* PagingViewController.swift */,
-				05FFAD7627B4DC8900431F29 /* AudioWaveFormView.swift */,
+				05FFAD7627B4DC8900431F29 /* AudioVisualizerView.swift */,
 				05FFAD7827B4EBC000431F29 /* AudioController.swift */,
 				0545326B27C18FA200873175 /* ScrubbingAudioViewController.swift */,
+				052885EC27C73BF60014ACD5 /* RecordingView.swift */,
+				056E70B427CA786B001731E3 /* UIColor+Extentions.swift */,
 			);
 			path = AudioNote;
 			sourceTree = "<group>";
@@ -151,6 +223,16 @@
 			path = AudioNoteUITests;
 			sourceTree = "<group>";
 		};
+		05F69E0B27CD7B3B003AF834 /* IconLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				05F69E0927CD7B23003AF834 /* IconPathFactory.swift */,
+				05F69E0C27CD7B54003AF834 /* Icons.swift */,
+				05F69E0E27CD7DE3003AF834 /* IconView.swift */,
+			);
+			path = IconLibrary;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +249,11 @@
 			dependencies = (
 			);
 			name = AudioNote;
+			packageProductDependencies = (
+				0545327527C491C100873175 /* MobiusCore */,
+				0545327727C491C100873175 /* MobiusExtras */,
+				05B3F10B27CFBB9E00F93851 /* Diffuser */,
+			);
 			productName = AudioNote;
 			productReference = 05B034FE27AF21A70032876D /* AudioNote.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +272,9 @@
 				05B0351927AF21A90032876D /* PBXTargetDependency */,
 			);
 			name = AudioNoteTests;
+			packageProductDependencies = (
+				0545327927C491C100873175 /* MobiusTest */,
+			);
 			productName = AudioNoteTests;
 			productReference = 05B0351727AF21A90032876D /* AudioNoteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -239,6 +329,10 @@
 				Base,
 			);
 			mainGroup = 05B034F527AF21A70032876D;
+			packageReferences = (
+				0545327427C491C100873175 /* XCRemoteSwiftPackageReference "Mobius" */,
+				05B3F10A27CFBB9E00F93851 /* XCRemoteSwiftPackageReference "diffuser" */,
+			);
 			productRefGroup = 05B034FF27AF21A70032876D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,14 +375,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054AF6D627D7BC460024A166 /* AudioRecorderLogic.swift in Sources */,
+				054AF6DD27D7BCE40024A166 /* AudioRecorderViewConnectable.swift in Sources */,
+				054AF6D827D7BC6B0024A166 /* AudioRecorderFuser.swift in Sources */,
+				05F69E0D27CD7B54003AF834 /* Icons.swift in Sources */,
+				05F69E0F27CD7DE3003AF834 /* IconView.swift in Sources */,
 				05FFAD7927B4EBC000431F29 /* AudioController.swift in Sources */,
 				0545326C27C18FA200873175 /* ScrubbingAudioViewController.swift in Sources */,
-				05B0350627AF21A70032876D /* ViewController.swift in Sources */,
+				05B0350627AF21A70032876D /* RecordingViewController.swift in Sources */,
 				05B0350227AF21A70032876D /* AppDelegate.swift in Sources */,
+				054AF6DF27D7BD0C0024A166 /* AudioRecorderLoopFactory.swift in Sources */,
+				0545327C27C4926000873175 /* AudioRecorderLoopTypes.swift in Sources */,
+				054AF6E327D8338D0024A166 /* AudioRecorderViewBinder.swift in Sources */,
 				05B0350C27AF21A70032876D /* AudioNote.xcdatamodeld in Sources */,
+				056E70B527CA786B001731E3 /* UIColor+Extentions.swift in Sources */,
+				054AF6DA27D7BC840024A166 /* AudioRecorderDiffuser.swift in Sources */,
+				052885ED27C73BF60014ACD5 /* RecordingView.swift in Sources */,
 				05B0350427AF21A70032876D /* SceneDelegate.swift in Sources */,
-				05FFAD7727B4DC8900431F29 /* AudioWaveFormView.swift in Sources */,
+				05FFAD7727B4DC8900431F29 /* AudioVisualizerView.swift in Sources */,
+				05F69E0A27CD7B23003AF834 /* IconPathFactory.swift in Sources */,
 				051B8F1727B335CC008EFBC7 /* PagingViewController.swift in Sources */,
+				05AC9ECE27CF0072009F1F95 /* RecordButtonView.swift in Sources */,
+				054AF6E127D832F90024A166 /* AudioRecorderSubtypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -442,7 +550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -624,6 +732,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0545327427C491C100873175 /* XCRemoteSwiftPackageReference "Mobius" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spotify/Mobius.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		05B3F10A27CFBB9E00F93851 /* XCRemoteSwiftPackageReference "diffuser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spotify/diffuser";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0545327527C491C100873175 /* MobiusCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0545327427C491C100873175 /* XCRemoteSwiftPackageReference "Mobius" */;
+			productName = MobiusCore;
+		};
+		0545327727C491C100873175 /* MobiusExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0545327427C491C100873175 /* XCRemoteSwiftPackageReference "Mobius" */;
+			productName = MobiusExtras;
+		};
+		0545327927C491C100873175 /* MobiusTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0545327427C491C100873175 /* XCRemoteSwiftPackageReference "Mobius" */;
+			productName = MobiusTest;
+		};
+		05B3F10B27CFBB9E00F93851 /* Diffuser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05B3F10A27CFBB9E00F93851 /* XCRemoteSwiftPackageReference "diffuser" */;
+			productName = Diffuser;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		05B0350A27AF21A70032876D /* AudioNote.xcdatamodeld */ = {

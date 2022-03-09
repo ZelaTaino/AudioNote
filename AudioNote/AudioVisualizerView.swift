@@ -26,10 +26,10 @@ final class AudioBarView: UIView {
     }
 }
 
-final class AudioWaveFormView: UIView {
-    private let scrollView: UIScrollView
+final class AudioVisualizerView: UIView {
+    let scrollView: UIScrollView
+    let stackView: UIStackView
     private let contentView: UIView
-    private let stackView: UIStackView
 
     init() {
         scrollView = UIScrollView()
@@ -63,32 +63,17 @@ final class AudioWaveFormView: UIView {
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
 
-            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.topAnchor.constraint(equalTo: topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
 
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
         ])
-    }
-
-    private func normalizeSoundLevel(level: Float) -> CGFloat {
-        let height = max(8.0, ((level + 20) / 20) * Float(frame.height))
-        return CGFloat(height)
-    }
-
-    func updateSequence(with powerValue: Float) {
-        let audioBar = AudioBarView()
-        audioBar.backgroundColor = .white
-        audioBar.height = normalizeSoundLevel(level: powerValue)
-        stackView.addArrangedSubview(audioBar)
-
-        let offset = CGPoint(x: scrollView.contentSize.width - scrollView.bounds.width , y: 0)
-        if offset.x > 0 { scrollView.setContentOffset(offset, animated: true) }
     }
 
     required init?(coder: NSCoder) {
