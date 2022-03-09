@@ -1,8 +1,5 @@
-//
-//  Icons.swift
-//  AudioNote
-//
-//  Created by Glizela Taino on 2/28/22.
-//
-
-import Foundation
+enum Icon {
+    case send
+    case stop
+    case sent
+}
