@@ -6,16 +6,10 @@ typealias Event = AudioRecorderEvent
 typealias Effect = AudioRecorderEffect
 
 struct AudioRecorderModel: Equatable {
-    let recordingState: RecordingState
-    let sendAudioState: SendAudioState
-    let saveLocation: URL?
+    let controllerState: ControllerState
 
-    func withChangedRecordingState(_ recordingState: RecordingState) -> AudioRecorderModel {
-        return AudioRecorderModel(
-            recordingState: recordingState,
-            sendAudioState: sendAudioState,
-            saveLocation: saveLocation
-        )
+    func withChangedControllerState(_ controllerState: ControllerState) -> AudioRecorderModel {
+        return AudioRecorderModel(controllerState: controllerState)
     }
 }
 
@@ -23,6 +17,7 @@ enum AudioRecorderEvent {
     case permissionGranted
     case persmissionDenied
     case recordButtonClicked
+    case playbackButtonClicked
 
 }
 

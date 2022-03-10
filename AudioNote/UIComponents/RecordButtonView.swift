@@ -1,27 +1,27 @@
 import UIKit
 
-final class RecordButtonView: UIButton {
-    private let stopView: IconView
+final class IconButtonView: UIButton {
+    private let iconView: IconView
 
-    init() {
-        stopView = IconView(type: .stop)
+    init(icon: Icon, backgroundcolor: UIColor) {
+        iconView = IconView(type: icon)
 
         super.init(frame: .zero)
 
         var configuration = UIButton.Configuration.filled()
-        configuration.baseBackgroundColor = UIColor.recordRed
+        configuration.baseBackgroundColor = backgroundcolor
         configuration.cornerStyle = .capsule
         self.configuration = configuration
 
-        stopView.translatesAutoresizingMaskIntoConstraints = false
-        stopView.isUserInteractionEnabled = false
-        addSubview(stopView)
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+        iconView.isUserInteractionEnabled = false
+        addSubview(iconView)
 
         NSLayoutConstraint.activate([
-            stopView.topAnchor.constraint(equalTo: topAnchor, constant: 12),
-            stopView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12),
-            stopView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            stopView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
+            iconView.topAnchor.constraint(equalTo: topAnchor, constant: 9),
+            iconView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -9),
+            iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 9),
+            iconView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -9),
         ])
     }
 
@@ -31,33 +31,34 @@ final class RecordButtonView: UIButton {
 
     override var isEnabled: Bool {
         didSet {
-            stopView.isUserInteractionEnabled = isEnabled
-            stopView.alpha = isEnabled ? 1.0 : 0.1
+            iconView.alpha = isEnabled ? 1.0 : 0.1
         }
     }
 
     override var isHighlighted: Bool {
         didSet {
-            stopView.alpha = isHighlighted ? 0.8 : 1.0
+            iconView.alpha = isHighlighted ? 0.8 : 1.0
         }
     }
 
-    var isRecording: Bool = false {
-        didSet {
-            animateStopViewIn(isRecording)
-        }
+    func showIcon(animate: Bool) {
+        animateIconView(animateIn: true, shouldAnimate: animate)
     }
 
-    private func animateStopViewIn(_ animateIn: Bool) {
+    func hideIcon(animate: Bool){
+        animateIconView(animateIn: false, shouldAnimate: animate)
+    }
+
+    private func animateIconView(animateIn: Bool, shouldAnimate: Bool) {
         UIView.animate(
-            withDuration: 0.3,
+            withDuration: shouldAnimate ? 0.3 : 0.0,
             delay: 0.0,
             usingSpringWithDamping: 0.5,
             initialSpringVelocity: 0.0,
             options: .curveEaseInOut,
             animations: { [weak self] in
                 let factor = animateIn ? 1.0 : 0.0
-                self?.stopView.transform = CGAffineTransform(scaleX: factor, y: factor)
+                self?.iconView.transform = CGAffineTransform(scaleX: factor, y: factor)
             }
         )
     }

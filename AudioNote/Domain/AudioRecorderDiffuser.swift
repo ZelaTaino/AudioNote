@@ -5,7 +5,7 @@ final class AudioRecorderDiffuser {
 
     func connect(view: RecordingView, audioViewBinder: AudioRecorderViewBinder) {
         diffuser = .intoAll([
-            .map({ $0.recordingState }, intoRecordingState(view: view, audioViewBinder: audioViewBinder)),
+            .map({ $0.controllerState }, intoControllerState(view: view, audioViewBinder: audioViewBinder)),
         ])
     }
 
@@ -17,18 +17,32 @@ final class AudioRecorderDiffuser {
         diffuser?.run(model)
     }
 
-    private func intoRecordingState(view: RecordingView, audioViewBinder: AudioRecorderViewBinder) -> Diffuser<RecordingState> {
+    private func intoControllerState(view: RecordingView, audioViewBinder: AudioRecorderViewBinder) -> Diffuser<ControllerState> {
         return .into { state in
             switch state {
-            case .recordReady:
-                view.recordButton.isRecording = false
+            case .idle:
+                view.recordButton.hideIcon(animate: false)
+                view.sendButton.hideIcon(animate: false)
+
+                view.playbackButton.showIcon(animate: false)
+                view.playbackButton.isEnabled = false
+
+                view.pauseButton.hideIcon(animate: false)
             case .recording:
-                view.recordButton.isRecording = true
+                view.recordButton.showIcon(animate: true)
                 audioViewBinder.startRecording()
-            case .recordFailed:
-                view.recordButton.isRecording = false
-            default:
-                break
+            case .recorded:
+                view.sendButton.showIcon(animate: true)
+
+                view.recordButton.hideIcon(animate: true)
+                audioViewBinder.stopRecording()
+
+                view.playbackButton.isEnabled = true
+            case .playback:
+                audioViewBinder.playAudio()
+
+                view.playbackButton.hideIcon(animate: true)
+                view.pauseButton.showIcon(animate: true)
             }
         }
     }

@@ -15,6 +15,15 @@ final class AudioRecorderViewBinder: AudioControllerDelegate {
         audioController.startRecording()
     }
 
+    func stopRecording() {
+        audioController.stopRecording(successfully: true)
+    }
+
+    func playAudio() {
+        audioController.prepareAudioPlayer()
+        audioController.playAudio()
+    }
+
     func didUpdateMeter(_ value: Float) {
         addAudioBar(with: value)
         scrollAudioVisualizer()

@@ -9,11 +9,7 @@ struct AudioRecorderLoopFactory {
         let loopBuilder: Mobius.Builder<Model, Event, Effect>
             = Mobius.loop(update: AudioRecorderLogic.update, effectHandler: effectRouter)
 
-        let initialModel = AudioRecorderModel(
-            recordingState: .idle,
-            sendAudioState: .idle,
-            saveLocation: nil
-        )
+        let initialModel = AudioRecorderModel(controllerState: .idle)
 
         return loopBuilder.makeController(from: initialModel, initiate: AudioRecorderLogic.initiator)
     }

@@ -1,10 +1,8 @@
-enum RecordingState: Equatable {
+enum ControllerState {
     case idle
-    case noPermission
-    case recordReady
     case recording
     case recorded
-    case recordFailed
+    case playback
 }
 
 enum SendAudioState: Equatable {

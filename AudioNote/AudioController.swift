@@ -113,7 +113,6 @@ extension AudioController: AVAudioPlayerDelegate {
     }
 
     func playAudio() {
-        audioPlayer?.delegate = self
         audioPlayer?.play()
     }
 
