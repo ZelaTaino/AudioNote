@@ -20,7 +20,10 @@ enum AudioRecorderLogic {
 
             return .noChange
         case .playbackButtonClicked:
-            let nextModel = model.withChangedControllerState(.playback)
+            let nextModel = model.withChangedPlaybackState(.play)
+            return .next(nextModel)
+        case .pauseButtonClicked:
+            let nextModel = model.withChangedPlaybackState(.pause)
             return .next(nextModel)
         default:
             return .noChange

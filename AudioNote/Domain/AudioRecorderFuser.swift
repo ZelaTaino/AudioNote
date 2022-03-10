@@ -8,6 +8,7 @@ final class AudioRecorderFuser {
         fuser = Fuser.fromAll([
             Fuser.extractConstant(.recordButtonClicked, .fromEvents(view.recordButton, for: .touchUpInside)),
             Fuser.extractConstant(.playbackButtonClicked, .fromEvents(view.playbackButton, for: .touchUpInside)),
+            Fuser.extractConstant(.pauseButtonClicked, .fromEvents(view.pauseButton, for: .touchUpInside)),
         ])
 
         fuserConnection = fuser?.connect(eventConsumer)

@@ -1,8 +1,13 @@
+import Combine
 enum ControllerState {
     case idle
     case recording
     case recorded
-    case playback
+}
+
+enum PlaybackState {
+    case play
+    case pause
 }
 
 enum SendAudioState: Equatable {
