@@ -22,6 +22,7 @@
 		054AF6DF27D7BD0C0024A166 /* AudioRecorderLoopFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6DE27D7BD0C0024A166 /* AudioRecorderLoopFactory.swift */; };
 		054AF6E127D832F90024A166 /* AudioRecorderSubtypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6E027D832F90024A166 /* AudioRecorderSubtypes.swift */; };
 		054AF6E327D8338D0024A166 /* AudioRecorderViewBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AF6E227D8338D0024A166 /* AudioRecorderViewBinder.swift */; };
+		0560A6AF27E1776300DF0CC9 /* AudioVisualizerUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0560A6AE27E1776300DF0CC9 /* AudioVisualizerUIController.swift */; };
 		056E70B527CA786B001731E3 /* UIColor+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E70B427CA786B001731E3 /* UIColor+Extentions.swift */; };
 		05AC9ECE27CF0072009F1F95 /* RecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC9ECD27CF0072009F1F95 /* RecordButtonView.swift */; };
 		05B0350227AF21A70032876D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B0350127AF21A70032876D /* AppDelegate.swift */; };
@@ -71,6 +72,7 @@
 		054AF6DE27D7BD0C0024A166 /* AudioRecorderLoopFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderLoopFactory.swift; sourceTree = "<group>"; };
 		054AF6E027D832F90024A166 /* AudioRecorderSubtypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderSubtypes.swift; sourceTree = "<group>"; };
 		054AF6E227D8338D0024A166 /* AudioRecorderViewBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewBinder.swift; sourceTree = "<group>"; };
+		0560A6AE27E1776300DF0CC9 /* AudioVisualizerUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizerUIController.swift; sourceTree = "<group>"; };
 		056E70B427CA786B001731E3 /* UIColor+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extentions.swift"; sourceTree = "<group>"; };
 		05AC9ECD27CF0072009F1F95 /* RecordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonView.swift; sourceTree = "<group>"; };
 		05B034FE27AF21A70032876D /* AudioNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 		054AF6D127D2824C0024A166 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				05F69E0B27CD7B3B003AF834 /* IconLibrary */,
 				05AC9ECD27CF0072009F1F95 /* RecordButtonView.swift */,
 			);
 			path = UIComponents;
@@ -188,7 +191,6 @@
 			children = (
 				054AF6D227D7BB4F0024A166 /* Domain */,
 				054AF6D127D2824C0024A166 /* UIComponents */,
-				05F69E0B27CD7B3B003AF834 /* IconLibrary */,
 				05B0350127AF21A70032876D /* AppDelegate.swift */,
 				05B0350327AF21A70032876D /* SceneDelegate.swift */,
 				05B0350527AF21A70032876D /* RecordingViewController.swift */,
@@ -198,6 +200,7 @@
 				05B0350A27AF21A70032876D /* AudioNote.xcdatamodeld */,
 				051B8F1627B335CC008EFBC7 /* PagingViewController.swift */,
 				05FFAD7627B4DC8900431F29 /* AudioVisualizerView.swift */,
+				0560A6AE27E1776300DF0CC9 /* AudioVisualizerUIController.swift */,
 				05FFAD7827B4EBC000431F29 /* AudioController.swift */,
 				0545326B27C18FA200873175 /* ScrubbingAudioViewController.swift */,
 				052885EC27C73BF60014ACD5 /* RecordingView.swift */,
@@ -226,8 +229,8 @@
 		05F69E0B27CD7B3B003AF834 /* IconLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				05F69E0927CD7B23003AF834 /* IconPathFactory.swift */,
 				05F69E0C27CD7B54003AF834 /* Icons.swift */,
+				05F69E0927CD7B23003AF834 /* IconPathFactory.swift */,
 				05F69E0E27CD7DE3003AF834 /* IconView.swift */,
 			);
 			path = IconLibrary;
@@ -387,6 +390,7 @@
 				054AF6DF27D7BD0C0024A166 /* AudioRecorderLoopFactory.swift in Sources */,
 				0545327C27C4926000873175 /* AudioRecorderLoopTypes.swift in Sources */,
 				054AF6E327D8338D0024A166 /* AudioRecorderViewBinder.swift in Sources */,
+				0560A6AF27E1776300DF0CC9 /* AudioVisualizerUIController.swift in Sources */,
 				05B0350C27AF21A70032876D /* AudioNote.xcdatamodeld in Sources */,
 				056E70B527CA786B001731E3 /* UIColor+Extentions.swift in Sources */,
 				054AF6DA27D7BC840024A166 /* AudioRecorderDiffuser.swift in Sources */,

@@ -4,4 +4,5 @@ enum Icon {
     case sent
     case play
     case pause
+    case cancel
 }

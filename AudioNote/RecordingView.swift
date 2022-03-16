@@ -7,6 +7,7 @@ final class RecordingView: UIView {
     let sendButton: IconButtonView
     let playbackButton: IconButtonView
     let pauseButton: IconButtonView
+    let cancelButton: IconButtonView
 
     init() {
         audioVisualizerView = AudioVisualizerView()
@@ -15,6 +16,7 @@ final class RecordingView: UIView {
         sendButton = IconButtonView(icon: .send, backgroundcolor: .sendOrange)
         playbackButton = IconButtonView(icon: .play, backgroundcolor: .clear)
         pauseButton = IconButtonView(icon: .pause, backgroundcolor: .clear)
+        cancelButton = IconButtonView(icon: .cancel, backgroundcolor: .clear)
 
         super.init(frame: .zero)
 
@@ -38,6 +40,7 @@ final class RecordingView: UIView {
         let configuration: UIButton.Configuration = .plain()
         playbackButton.configuration = configuration
         pauseButton.configuration = configuration
+        cancelButton.configuration = configuration
     }
 
     private func buildHierarchy() {
@@ -46,6 +49,7 @@ final class RecordingView: UIView {
         addSubview(sendButton)
         addSubview(playbackButton)
         addSubview(pauseButton)
+        addSubview(cancelButton)
     }
 
     private func activateConstraints() {
@@ -54,9 +58,19 @@ final class RecordingView: UIView {
         sendButton.translatesAutoresizingMaskIntoConstraints = false
         playbackButton.translatesAutoresizingMaskIntoConstraints = false
         pauseButton.translatesAutoresizingMaskIntoConstraints = false
+        cancelButton.translatesAutoresizingMaskIntoConstraints = false
 
-        let layoutGuide = UILayoutGuide()
-        addLayoutGuide(layoutGuide)
+        let playBackCenterLayoutGuide = UILayoutGuide()
+        addLayoutGuide(playBackCenterLayoutGuide)
+
+        let cancelCenterLayoutGuide = UILayoutGuide()
+        addLayoutGuide(cancelCenterLayoutGuide)
+
+        let controllerLayoutGuide = UILayoutGuide()
+        addLayoutGuide(controllerLayoutGuide)
+
+        let thirdOfControllerLayoutGuide = UILayoutGuide()
+        addLayoutGuide(thirdOfControllerLayoutGuide)
 
         NSLayoutConstraint.activate([
             audioVisualizerView.topAnchor.constraint(equalTo: topAnchor),
@@ -64,28 +78,42 @@ final class RecordingView: UIView {
             audioVisualizerView.trailingAnchor.constraint(equalTo: trailingAnchor),
             audioVisualizerView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.68),
 
+            controllerLayoutGuide.topAnchor.constraint(equalTo: audioVisualizerView.bottomAnchor),
+            controllerLayoutGuide.bottomAnchor.constraint(equalTo: bottomAnchor),
+
+            thirdOfControllerLayoutGuide.heightAnchor.constraint(equalTo: controllerLayoutGuide.heightAnchor, multiplier: 0.33),
+            thirdOfControllerLayoutGuide.bottomAnchor.constraint(equalTo: bottomAnchor),
+
+            recordButton.centerYAnchor.constraint(equalTo: thirdOfControllerLayoutGuide.topAnchor),
             recordButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            recordButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -52),
             recordButton.heightAnchor.constraint(equalToConstant: 44),
             recordButton.widthAnchor.constraint(equalTo: recordButton.heightAnchor),
 
+            sendButton.centerYAnchor.constraint(equalTo: thirdOfControllerLayoutGuide.topAnchor),
             sendButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            sendButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -52),
             sendButton.heightAnchor.constraint(equalToConstant: 44),
-            sendButton.widthAnchor.constraint(equalToConstant: 44),
+            sendButton.widthAnchor.constraint(equalTo: sendButton.heightAnchor),
 
-            layoutGuide.topAnchor.constraint(equalTo: audioVisualizerView.bottomAnchor),
-            layoutGuide.bottomAnchor.constraint(equalTo: recordButton.topAnchor),
+            playBackCenterLayoutGuide.topAnchor.constraint(equalTo: audioVisualizerView.bottomAnchor),
+            playBackCenterLayoutGuide.bottomAnchor.constraint(equalTo: recordButton.topAnchor),
 
             playbackButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            playbackButton.centerYAnchor.constraint(equalTo: layoutGuide.centerYAnchor),
+            playbackButton.centerYAnchor.constraint(equalTo: playBackCenterLayoutGuide.centerYAnchor),
             playbackButton.heightAnchor.constraint(equalToConstant: 40),
             playbackButton.widthAnchor.constraint(equalTo: playbackButton.heightAnchor),
 
             pauseButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            pauseButton.centerYAnchor.constraint(equalTo: layoutGuide.centerYAnchor),
+            pauseButton.centerYAnchor.constraint(equalTo: playBackCenterLayoutGuide.centerYAnchor),
             pauseButton.heightAnchor.constraint(equalToConstant: 40),
             pauseButton.widthAnchor.constraint(equalTo: pauseButton.heightAnchor),
+
+            cancelCenterLayoutGuide.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0),
+            cancelCenterLayoutGuide.trailingAnchor.constraint(equalTo: recordButton.leadingAnchor, constant: -8.0),
+
+            cancelButton.heightAnchor.constraint(equalToConstant: 40),
+            cancelButton.widthAnchor.constraint(equalTo: cancelButton.heightAnchor),
+            cancelButton.centerXAnchor.constraint(equalTo: cancelCenterLayoutGuide.centerXAnchor),
+            cancelButton.centerYAnchor.constraint(equalTo: recordButton.centerYAnchor),
         ])
     }
 }

@@ -25,6 +25,7 @@ final class AudioRecorderViewConnectable: Connectable {
             self?.eventConsumer?(event)
         }
 
+        audioRecorderViewBinder.connect(output: eventConsumer)
         fuser.connect(view: view, eventConsumer: eventConsumer)
         diffuser.connect(view: view, audioViewBinder: audioRecorderViewBinder)
 
@@ -39,5 +40,6 @@ final class AudioRecorderViewConnectable: Connectable {
         eventConsumer = nil
         fuser.dispose()
         diffuser.disconnect()
+        audioRecorderViewBinder.disconnect()
     }
 }

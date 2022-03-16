@@ -7,7 +7,7 @@ enum AudioRecorderLogic {
 
     static func update(model: Model, event: Event) -> Next<Model, Effect> {
         switch event {
-        case .recordButtonClicked:
+        case .recordingToggleRequested:
             if model.controllerState == .idle {
                 let nextModel = model.withChangedControllerState(.recording)
                 return .next(nextModel)
@@ -19,11 +19,14 @@ enum AudioRecorderLogic {
             }
 
             return .noChange
-        case .playbackButtonClicked:
+        case .playbackRequested:
             let nextModel = model.withChangedPlaybackState(.play)
             return .next(nextModel)
-        case .pauseButtonClicked:
+        case .stopPlaybackRequested:
             let nextModel = model.withChangedPlaybackState(.pause)
+            return .next(nextModel)
+        case .resetRecordingRequested:
+            let nextModel = model.withChangedControllerState(.idle)
             return .next(nextModel)
         default:
             return .noChange

@@ -27,9 +27,13 @@ struct AudioRecorderModel: Equatable {
 enum AudioRecorderEvent {
     case permissionGranted
     case persmissionDenied
-    case recordButtonClicked
-    case playbackButtonClicked
-    case pauseButtonClicked
+
+    case recordingToggleRequested
+    case resetRecordingRequested
+
+    case playbackRequested
+    case stopPlaybackRequested
+
 }
 
 enum AudioRecorderEffect {}

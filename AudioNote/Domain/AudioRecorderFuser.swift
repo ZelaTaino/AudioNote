@@ -6,9 +6,10 @@ final class AudioRecorderFuser {
 
     func connect(view: RecordingView, eventConsumer: @escaping (Event) -> Void) {
         fuser = Fuser.fromAll([
-            Fuser.extractConstant(.recordButtonClicked, .fromEvents(view.recordButton, for: .touchUpInside)),
-            Fuser.extractConstant(.playbackButtonClicked, .fromEvents(view.playbackButton, for: .touchUpInside)),
-            Fuser.extractConstant(.pauseButtonClicked, .fromEvents(view.pauseButton, for: .touchUpInside)),
+            Fuser.extractConstant(.recordingToggleRequested, .fromEvents(view.recordButton, for: .touchUpInside)),
+            Fuser.extractConstant(.playbackRequested, .fromEvents(view.playbackButton, for: .touchUpInside)),
+            Fuser.extractConstant(.stopPlaybackRequested, .fromEvents(view.pauseButton, for: .touchUpInside)),
+            Fuser.extractConstant(.resetRecordingRequested, .fromEvents(view.cancelButton, for: .touchUpInside)),
         ])
 
         fuserConnection = fuser?.connect(eventConsumer)

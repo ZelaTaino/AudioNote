@@ -4,6 +4,25 @@ struct IconPathFactory {
     static func path(type: Icon, onto rect: CGRect) -> CGPath? {
         var shape = UIBezierPath()
         switch type {
+        case .cancel:
+            shape.move(to: CGPoint(x: 22.55, y: 0.61))
+            shape.addCurve(to: CGPoint(x: 20.62, y: 0.61), controlPoint1: CGPoint(x: 22.02, y: 0.07), controlPoint2: CGPoint(x: 21.15, y: 0.07))
+            shape.addLine(to: CGPoint(x: 11.94, y: 9.28))
+            shape.addLine(to: CGPoint(x: 3.27, y: 0.61))
+            shape.addCurve(to: CGPoint(x: 1.34, y: 0.61), controlPoint1: CGPoint(x: 2.73, y: 0.07), controlPoint2: CGPoint(x: 1.87, y: 0.07))
+            shape.addCurve(to: CGPoint(x: 1.34, y: 2.54), controlPoint1: CGPoint(x: 0.8, y: 1.14), controlPoint2: CGPoint(x: 0.8, y: 2))
+            shape.addLine(to: CGPoint(x: 10.02, y: 11.21))
+            shape.addLine(to: CGPoint(x: 1.34, y: 19.89))
+            shape.addCurve(to: CGPoint(x: 1.34, y: 21.82), controlPoint1: CGPoint(x: 0.8, y: 20.42), controlPoint2: CGPoint(x: 0.8, y: 21.29))
+            shape.addCurve(to: CGPoint(x: 3.27, y: 21.82), controlPoint1: CGPoint(x: 1.87, y: 22.35), controlPoint2: CGPoint(x: 2.73, y: 22.35))
+            shape.addLine(to: CGPoint(x: 11.94, y: 13.14))
+            shape.addLine(to: CGPoint(x: 20.62, y: 21.82))
+            shape.addCurve(to: CGPoint(x: 22.55, y: 21.82), controlPoint1: CGPoint(x: 21.15, y: 22.35), controlPoint2: CGPoint(x: 22.02, y: 22.35))
+            shape.addCurve(to: CGPoint(x: 22.55, y: 19.89), controlPoint1: CGPoint(x: 23.08, y: 21.29), controlPoint2: CGPoint(x: 23.08, y: 20.42))
+            shape.addLine(to: CGPoint(x: 13.87, y: 11.21))
+            shape.addLine(to: CGPoint(x: 22.55, y: 2.54))
+            shape.addCurve(to: CGPoint(x: 22.55, y: 0.61), controlPoint1: CGPoint(x: 23.08, y: 2), controlPoint2: CGPoint(x: 23.08, y: 1.14))
+            shape.close()
         case .pause:
             let leftBar = CGRect(x: 0, y: 0, width: 11, height: 30)
             let rightBar = CGRect(x: 15, y: 0, width: 11, height: 30)

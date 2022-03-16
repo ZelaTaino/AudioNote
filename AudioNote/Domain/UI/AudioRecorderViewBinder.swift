@@ -1,56 +1,70 @@
-import UIKit
+import AVFoundation
 
-final class AudioRecorderViewBinder: AudioControllerDelegate {
+final class AudioRecorderViewBinder: NSObject {
     private let audioVisualizerView: AudioVisualizerView
+    private let audioUiController: AudioVisualizerUIController
     private let audioController: AudioController
+    private var eventConsumer: ((Event) -> Void)?
 
     init(view: AudioVisualizerView) {
         audioVisualizerView = view
+        audioUiController = AudioVisualizerUIController(view: view)
         audioController = AudioController()
-        audioController.delegate = self
+    }
+
+    // MARK: Public methods
+
+    func connect(output: @escaping (Event) -> Void) {
+        eventConsumer = output
+    }
+
+    func disconnect() {
+        eventConsumer = nil
+    }
+}
+
+// MARK: Audio Recorder
+
+extension AudioRecorderViewBinder: AVAudioRecorderDelegate {
+
+    func resetRecording() {
+        audioUiController.resetRecording()
     }
 
     func startRecording() {
         audioController.prepareRecorder()
         audioController.startRecording()
+        audioController.audioRecorder?.delegate = self
+        audioUiController.drawAudioVisual(with: audioController.getMeter)
     }
 
     func stopRecording() {
         audioController.stopRecording(successfully: true)
+        audioUiController.skipPlayheadToStart()
     }
 
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        eventConsumer?(.recordingToggleRequested)
+    }
+}
+
+// MARK: Audio Player
+
+extension AudioRecorderViewBinder: AVAudioPlayerDelegate {
     func playAudio() {
         audioController.prepareAudioPlayer()
         audioController.playAudio()
+        audioController.audioPlayer?.delegate = self
+
+        audioUiController.playAudioVisual()
     }
 
     func pauseAudio() {
         audioController.stopAudio(successfully: true)
+        audioUiController.skipPlayheadToStart()
     }
 
-    func didUpdateMeter(_ value: Float) {
-        addAudioBar(with: value)
-        scrollAudioVisualizer()
-    }
-
-    private func normalizeSoundLevel(level: Float) -> CGFloat {
-        let boundedLevel = level > 0 ? 0 : level
-        let height = max(8.0, ((boundedLevel + 25) / 25) * Float(audioVisualizerView.frame.height))
-        return CGFloat(height)
-    }
-
-    private func addAudioBar(with powerValue: Float) {
-        let audioBar = AudioBarView()
-        audioBar.backgroundColor = .white
-        audioBar.height = normalizeSoundLevel(level: powerValue)
-        audioVisualizerView.stackView.addArrangedSubview(audioBar)
-    }
-
-    private func scrollAudioVisualizer() {
-        let offset = CGPoint(
-            x: audioVisualizerView.scrollView.contentSize.width - audioVisualizerView.scrollView.bounds.width,
-            y: 0
-        )
-        if offset.x > 0 { audioVisualizerView.scrollView.setContentOffset(offset, animated: true) }
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        eventConsumer?(.stopPlaybackRequested)
     }
 }
